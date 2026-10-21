@@ -1,11 +1,23 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 /* ============ DATA ============ */
+// const IMG = {
+//   hero: "/images/hero.jpg", shop: "/images/shop.jpg",
+//   fade: "/images/fade.jpg", beard: "/images/beard.jpg", texture: "/images/texture.jpg",
+//   b1: "/images/barber-1.jpg", b2: "/images/barber-2.jpg", b3: "/images/barber-3.jpg",
+// };
 const IMG = {
-  hero: "/images/hero.jpg", shop: "/images/shop.jpg",
-  fade: "/images/fade.jpg", beard: "/images/beard.jpg", texture: "/images/texture.jpg",
-  b1: "/images/barber-1.jpg", b2: "/images/barber-2.jpg", b3: "/images/barber-3.jpg",
+  hero: `${import.meta.env.BASE_URL}images/hero.jpg`, 
+  shop: `${import.meta.env.BASE_URL}images/shop.jpg`,
+  fade: `${import.meta.env.BASE_URL}images/fade.jpg`, 
+  beard: `${import.meta.env.BASE_URL}images/beard.jpg`, 
+  texture: `${import.meta.env.BASE_URL}images/texture.jpg`,
+  b1: `${import.meta.env.BASE_URL}images/barber-1.jpg`, 
+  b2: `${import.meta.env.BASE_URL}images/barber-2.jpg`, 
+  b3: `${import.meta.env.BASE_URL}images/barber-3.jpg`,
 };
+
+
 const ROUTES = ["home", "services", "gallery", "barbers", "booking", "contacts"] as const;
 type Route = (typeof ROUTES)[number];
 const LABEL: Record<Route, string> = { home: "Home", services: "Services", gallery: "Gallery", barbers: "Barbers", booking: "Booking", contacts: "Contacts" };

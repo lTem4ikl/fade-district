@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite' // <-- Импортируем плагин
+import tailwindcss from '@tailwindcss/vite' 
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), // <-- Добавляем в список плагинов
+    tailwindcss(), 
   ],
   base: '/fade-district/',
 })
