@@ -7,4 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(), // <-- Добавляем в список плагинов
   ],
+  base: '/fade-district/',
 })
